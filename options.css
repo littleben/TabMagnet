@@ -14,6 +14,15 @@ body {
   padding: 1.5rem;
   min-width: 300px;
   color: var(--text);
+  /* 添加背景图片 */
+  background-image: url('../images/BG.jpg'); /* 使用相对路径 */
+  background-size: cover; /* 让背景图片覆盖整个区域 */
+  background-position: top; /* 图片居中显示 */
+  background-repeat: no-repeat; /* 防止图片重复 */
+  /* 可以考虑添加一个背景颜色作为备用，以防图片加载失败 */
+  /* background-color: var(--bg); */
+  /* 如果背景图片较暗，可能需要调整文字颜色以保证可读性 */
+  /* color: #ffffff; */
 }
 
 .header {
@@ -24,16 +33,29 @@ body {
 }
 
 h1 {
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 600;
+  /* 添加白色文字描边效果 */
+  color: var(--text); /* 确保文字本身颜色不受影响 */
+  text-shadow:
+   -1px -1px 0 #fff,
+    1px -1px 0 #fff,
+   -1px  1px 0 #fff,
+    1px  1px 0 #fff; /* 使用多个 text-shadow 模拟边框 */
 }
 
 #lang {
   border: 1px solid var(--border);
   border-radius: var(--radius);
-  padding: 0.4rem 0.75rem;
+  padding: 0.4rem 0.75rem 0.4rem 0.75rem;
+  padding-right: 2rem; /* 增加右侧内边距，为下拉箭头留出更多空间 */
   background: white;
   font-size: 0.9rem;
+  appearance: none; /* 确保自定义样式能正确应用 */
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.7rem top 50%;
+  background-size: 0.65rem auto;
 }
 
 .option {
@@ -61,6 +83,36 @@ input[type="radio"] {
   height: 1.25rem;
   accent-color: var(--primary);
   cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: 2px solid var(--border);
+  border-radius: 50%;
+  outline: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: inline-block;
+  flex-shrink: 0; /* 防止在flex布局中被压缩 */
+  vertical-align: middle; /* 确保垂直对齐一致 */
+}
+
+input[type="radio"]:checked {
+  border-color: var(--primary);
+  background-color: white;
+}
+
+input[type="radio"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  background-color: var(--primary);
 }
 
 label {

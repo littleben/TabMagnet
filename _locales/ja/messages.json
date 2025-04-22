@@ -8,7 +8,7 @@
     "description": "拡張機能の説明"
   },
   "optionsTitle": {
-    "message": "新しいタブの位置オプション",
+    "message": "⚙️ 新しいタブの位置オプション",
     "description": "オプションページのタイトル"
   },
   "optionsHeading": {
@@ -16,19 +16,19 @@
     "description": "オプションページの見出し"
   },
   "optionRight": {
-    "message": "現在のタブの<span class='highlight'>右側</span>に開く (デフォルト)",
+    "message": "現在のタブの右側に開く (デフォルト)",
     "description": "右側位置オプション"
   },
   "optionLeft": {
-    "message": "現在のタブの<span class='highlight'>左側</span>に開く",
+    "message": "現在のタブの左側に開く",
     "description": "左側位置オプション"
   },
   "optionStart": {
-    "message": "ウィンドウの<span class='highlight'>一番左</span>に開く",
+    "message": "ウィンドウの一番左に開く",
     "description": "開始位置オプション"
   },
   "optionEnd": {
-    "message": "ウィンドウの<span class='highlight'>一番右</span>に開く (ブラウザのデフォルト)",
+    "message": "ウィンドウの一番右に開く (ブラウザのデフォルト)",
     "description": "終了位置オプション"
   },
   "statusSaved": {

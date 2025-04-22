@@ -13,7 +13,8 @@ async function loadMessages(lang) {
 function applyTranslations(messages) {
   if (!messages) return;
   document.querySelectorAll('[data-i18n]').forEach(el => {
-    el.textContent = messages[el.dataset.i18n]?.message || '';
+    // 确保这里是 innerHTML
+    el.innerHTML = messages[el.dataset.i18n]?.message || '';
   });
 }
 
@@ -84,3 +85,13 @@ if (document.readyState === 'loading') {
 } else {
   init();
 }
+
+// 查找类似这样的代码
+document.getElementById('option-right-label').textContent = chrome.i18n.getMessage('optionRight');
+// 修改为
+document.getElementById('option-right-label').innerHTML = chrome.i18n.getMessage('optionRight');
+
+// 对所有选项标签进行类似修改
+document.getElementById('option-left-label').innerHTML = chrome.i18n.getMessage('optionLeft');
+document.getElementById('option-start-label').innerHTML = chrome.i18n.getMessage('optionStart');
+document.getElementById('option-end-label').innerHTML = chrome.i18n.getMessage('optionEnd');
