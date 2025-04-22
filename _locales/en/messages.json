@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "New Tab Position Configurable",
+    "description": "Extension name"
+  },
+  "extDesc": {
+    "message": "Opens new tabs next to the current tab, with configurable position.",
+    "description": "Extension description"
+  },
+  "optionsTitle": {
+    "message": "New Tab Position Options",
+    "description": "Options page title"
+  },
+  "optionsHeading": {
+    "message": "New Tab Open Position",
+    "description": "Options page heading"
+  },
+  "optionRight": {
+    "message": "Open to the right of the current tab (Default)",
+    "description": "Right position option"
+  },
+  "optionLeft": {
+    "message": "Open to the left of the current tab",
+    "description": "Left position option"
+  },
+  "optionStart": {
+    "message": "Open at the far left of the window",
+    "description": "Start position option"
+  },
+  "optionEnd": {
+    "message": "Open at the far right of the window (Browser default)",
+    "description": "End position option"
+  },
+  "statusSaved": {
+    "message": "Options saved.",
+    "description": "Status message when options are saved"
+  },
+  "language_en": {
+    "message": "English",
+    "description": "English language name"
+  },
+  "language_zh": {
+    "message": "Chinese",
+    "description": "Chinese language name"
+  },
+  "language_ja": {
+    "message": "Japanese",
+    "description": "Japanese language name"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "TabMagnet",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": {
+      "16": "images/icon16.png",
+      "32": "images/icon32.png",
+      "48": "images/icon48.png",
+      "128": "images/icon128.png"
+    },
+    "default_popup": "options.html"
+  },
+  "default_locale": "en",
+  "incognito": "split",
+  "permissions": [
+    "tabs",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"  
+  },
+  "options_ui": {  
+    "page": "options.html",
+    "open_in_tab": false,  
+    "browser_style": true  
+  },
+  "icons": {
+    "16": "images/icon16.png",
+    "32": "images/icon32.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  }
+}

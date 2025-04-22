@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "新しいタブ位置設定",
+    "description": "拡張機能名"
+  },
+  "extDesc": {
+    "message": "新しいタブを現在のタブの隣に開きます。位置を設定可能です。",
+    "description": "拡張機能の説明"
+  },
+  "optionsTitle": {
+    "message": "新しいタブの位置オプション",
+    "description": "オプションページのタイトル"
+  },
+  "optionsHeading": {
+    "message": "新しいタブを開く位置",
+    "description": "オプションページの見出し"
+  },
+  "optionRight": {
+    "message": "現在のタブの<span class='highlight'>右側</span>に開く (デフォルト)",
+    "description": "右側位置オプション"
+  },
+  "optionLeft": {
+    "message": "現在のタブの<span class='highlight'>左側</span>に開く",
+    "description": "左側位置オプション"
+  },
+  "optionStart": {
+    "message": "ウィンドウの<span class='highlight'>一番左</span>に開く",
+    "description": "開始位置オプション"
+  },
+  "optionEnd": {
+    "message": "ウィンドウの<span class='highlight'>一番右</span>に開く (ブラウザのデフォルト)",
+    "description": "終了位置オプション"
+  },
+  "statusSaved": {
+    "message": "設定を保存しました。",
+    "description": "設定保存後のステータスメッセージ"
+  },
+  "language_en": {
+    "message": "英語",
+    "description": "英語の言語名"
+  },
+  "language_zh": {
+    "message": "中国語",
+    "description": "中国語の言語名"
+  },
+  "language_ja": {
+    "message": "日本語",
+    "description": "日本語の言語名"
+  }
+}

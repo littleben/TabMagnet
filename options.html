@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="options.css">
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1 data-i18n="optionsTitle"></h1>
+      <select id="lang">
+        <option value="en">English</option>
+        <option value="zh_CN">中文</option>
+        <option value="ja">日本語</option>
+      </select>
+    </div>
+
+    <form id="options">
+      <div class="option">
+        <input type="radio" name="position" value="right" id="right" checked>
+        <label for="right" data-i18n="optionRight"></label>
+      </div>
+      <div class="option">
+        <input type="radio" name="position" value="left" id="left">
+        <label for="left" data-i18n="optionLeft"></label>
+      </div>
+      <div class="option">
+        <input type="radio" name="position" value="start" id="start">
+        <label for="start" data-i18n="optionStart"></label>
+      </div>
+      <div class="option">
+        <input type="radio" name="position" value="end" id="end">
+        <label for="end" data-i18n="optionEnd"></label>
+      </div>
+    </form>
+
+    <!-- 移除保存按钮 -->
+    <div id="status"></div>
+  </div>
+  <script src="options.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+{
+  "extName": {
+    "message": "新标签页位置（可配置）",
+    "description": "扩展名称"
+  },
+  "extDesc": {
+    "message": "在当前标签页旁边打开新标签页，位置可配置。",
+    "description": "扩展描述"
+  },
+  "optionsTitle": {
+    "message": "TabMagnet 设置",
+    "description": "选项页标题"
+  },
+  "optionsHeading": {
+    "message": "新标签页打开位置",
+    "description": "选项页面标题"
+  },
+  "optionRight": {
+    "message": "在当前标签页的右侧打开 (默认)",
+    "description": "右侧位置选项"
+  },
+  "optionLeft": {
+    "message": "在当前标签页的左侧打开",
+    "description": "左侧位置选项"
+  },
+  "optionStart": {
+    "message": "在窗口的最左侧打开",
+    "description": "起始位置选项"
+  },
+  "optionEnd": {
+    "message": "在窗口的最右侧打开 (浏览器默认)",
+    "description": "结束位置选项"
+  },
+  "statusSaved": {
+    "message": "选项已保存。",
+    "description": "选项保存后的状态消息"
+  },
+  "language_en": {
+    "message": "英文",
+    "description": "英文语言名称"
+  },
+  "language_zh": {
+    "message": "中文",
+    "description": "中文语言名称"
+  },
+  "language_ja": {
+    "message": "日文",
+    "description": "日文语言名称"
+  }
+}
