@@ -48,8 +48,8 @@ How to switch languages:
 
 ## Technical Details
 - Chrome Manifest V3 compliant
-- Uses <mcsymbol name="chrome.tabs.onCreated" filename="background.js" path="/Users/ben/Next Tab/TabMagnet/background.js" startline="1" type="function"></mcsymbol> for tab creation events
-- Syncs settings via <mcsymbol name="chrome.storage.sync" filename="options.js" path="/Users/ben/Next Tab/TabMagnet/options.js" startline="3" type="function"></mcsymbol>
+- Uses <mcsymbol name="chrome.tabs.onCreated" filename="background.js" path="TabMagnet/background.js" startline="1" type="function"></mcsymbol> for tab creation events
+- Syncs settings via <mcsymbol name="chrome.storage.sync" filename="options.js" path="TabMagnet/options.js" startline="3" type="function"></mcsymbol>
 - Responsive layout (min-width: 300px)
 
 ## Contributing
