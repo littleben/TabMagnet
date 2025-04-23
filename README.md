@@ -1,3 +1,4 @@
+![TabMagnet](images/TabMagnet.jpg)
 # TabMagnet - New Tab Position Controller
 
 Chrome extension for configuring new tab positions in browser windows with multilingual support.
