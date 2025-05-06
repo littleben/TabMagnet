@@ -2,6 +2,7 @@
 # TabMagnet - New Tab Position Controller
 
 Chrome extension for configuring new tab positions in browser windows with multilingual support.
+https://chromewebstore.google.com/detail/tabmagnet/hcjodleodhbpnjcdfgdahdfnadfmfikn
 
 ## Key Features
 - Customizable new tab positions:
