@@ -46,5 +46,29 @@
   "language_ja": {
     "message": "日本語",
     "description": "日本語の言語名"
+  },
+  "languageChanged": {
+    "message": "言語が変更されました。",
+    "description": "言語変更後のステータスメッセージ。"
+  },
+  "shortcutInfoText_defaultPlatform": {
+    "message": "ヒント：<b>Alt+Shift+2</b> ショートカットを使用すると、新しいタブをすばやく右端に開くことができます！",
+    "description": "キーボードショートカットに関する情報（Windows/Linux向け）。"
+  },
+  "shortcutInfoText_macPlatform": {
+    "message": "ヒント：<b>Option+Shift+2</b> ショートカットを使用すると、新しいタブをすばやく右端に開くことができます！",
+    "description": "キーボードショートカットに関する情報（macOS向け）。"
+  },
+  "shortcutInfoText_customizePart1": {
+    "message": "また、",
+    "description": "カスタマイズリンク前のテキスト部分。"
+  },
+  "customizeShortcutLinkText": {
+    "message": "こちらでこのショートカットをカスタマイズ",
+    "description": "ショートカットをカスタマイズするためのリンクテキスト。"
+  },
+  "shortcutInfoText_customizePart2": {
+    "message": "できます。",
+    "description": "カスタマイズリンク後のテキスト部分（例：句点）。"
   }
 }

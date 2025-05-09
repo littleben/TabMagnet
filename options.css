@@ -120,6 +120,17 @@ label {
   cursor: pointer;
 }
 
+.checkbox-option input[type="checkbox"] {
+  width: 1.25rem; /* Match radio button size */
+  height: 1.25rem; /* Match radio button size */
+  accent-color: var(--primary);
+  cursor: pointer;
+  margin: 0; /* Reset margin */
+  padding: 0; /* Reset padding */
+  flex-shrink: 0; /* Prevent shrinking in flex layout */
+  vertical-align: middle; /* Align with label text */
+}
+
 #status {
   position: fixed;
   top: 1rem;
@@ -137,4 +148,31 @@ label {
 
 .showing {
   opacity: 1;
+}
+
+.shortcut-info {
+  margin-top: 1.5rem; /* Add some space above the text */
+  padding: 0.75rem 1rem;
+  background-color: rgba(255, 255, 255, 0.85); /* Slightly transparent white background */
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: 0.9rem;
+  text-align: center;
+  color: var(--text); /* Ensure good contrast with its background */
+  box-shadow: var(--shadow);
+}
+
+.shortcut-info b {
+  font-weight: 600; /* Make the shortcut keys bold */
+  color: var(--primary); /* Highlight the shortcut keys with primary color */
+}
+
+.clickable-link {
+  color: var(--primary);
+  text-decoration: none;
+  cursor: pointer; /* Indicate it's clickable */
+}
+
+.clickable-link:hover {
+  text-decoration: underline;
 }

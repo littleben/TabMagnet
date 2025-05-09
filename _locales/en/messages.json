@@ -46,5 +46,29 @@
   "language_ja": {
     "message": "Japanese",
     "description": "Japanese language name"
+  },
+  "languageChanged": {
+    "message": "Language changed.",
+    "description": "Status message when language is changed."
+  },
+  "shortcutInfoText_defaultPlatform": {
+    "message": "Tip: Use <b>Alt+Shift+2</b> to quickly open a new tab at the far right!",
+    "description": "Information text about the keyboard shortcut for default platforms (Windows/Linux)."
+  },
+  "shortcutInfoText_macPlatform": {
+    "message": "Tip: Use <b>Option+Shift+2</b> to quickly open a new tab at the far right!",
+    "description": "Information text about the keyboard shortcut for macOS."
+  },
+  "shortcutInfoText_customizePart1": {
+    "message": "You can also ",
+    "description": "Part of the text before the customize link."
+  },
+  "customizeShortcutLinkText": {
+    "message": "customize this shortcut here",
+    "description": "Text for the link to customize shortcuts."
+  },
+  "shortcutInfoText_customizePart2": {
+    "message": ".",
+    "description": "Part of the text after the customize link (e.g., a period)."
   }
 }
