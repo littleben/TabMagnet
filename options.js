@@ -2,7 +2,9 @@ let messages = null;
 
 async function loadMessages(lang) {
   try {
-    const res = await fetch(chrome.runtime.getURL(`_locales/${lang}/messages.json`));
+    // Add a cache-busting query parameter
+    const cacheBuster = '?v=' + Date.now();
+    const res = await fetch(chrome.runtime.getURL(`_locales/${lang}/messages.json${cacheBuster}`));
     return await res.json();
   } catch (error) {
     console.error('加载语言包失败:', error);
@@ -52,14 +54,47 @@ async function init() {
   }
 
   try {
-    // 初始化语言
-    const { language = 'en' } = await chrome.storage.sync.get({ language: 'en' });
+    // 1. Get stored language, defaulting to 'en' if nothing is stored.
+    let { language: currentLanguage } = await chrome.storage.sync.get({ language: 'en' });
+    let languageWasStored = true;
+    if (currentLanguage === 'en') {
+        // Check if 'en' was the actual stored value or just the default fallback
+        const storedData = await chrome.storage.sync.get('language');
+        if (storedData.language === undefined) {
+            languageWasStored = false;
+        }
+    }
+
+    // 2. If no language was explicitly stored by the user, try to use browser's UI language.
+    if (!languageWasStored) {
+      const browserUILanguage = chrome.i18n.getUILanguage(); // e.g., "en-US", "zh-CN", "ja"
+      const supportedLanguages = Array.from(document.getElementById('lang').options).map(opt => opt.value);
+      
+      // Check if the full locale (e.g., "en-US") is supported
+      if (supportedLanguages.includes(browserUILanguage)) {
+        currentLanguage = browserUILanguage;
+      } else {
+        // Check if the base language (e.g., "en" from "en-US") is supported
+        const baseLanguage = browserUILanguage.split('-')[0];
+        if (supportedLanguages.includes(baseLanguage)) {
+          currentLanguage = baseLanguage;
+        }
+        // If neither full nor base is supported, currentLanguage remains 'en' (our initial default)
+      }
+    }
+
+    // 3. Set the language select dropdown and load messages.
     const langSelect = document.getElementById('lang');
-    langSelect.value = language;
+    langSelect.value = currentLanguage; // This will select 'en' if browser lang isn't supported
     
-    // 加载并应用翻译
-    messages = await loadMessages(language);
+    messages = await loadMessages(currentLanguage);
     applyTranslations(messages);
+
+    // Save the determined language (either browser default or 'en') if nothing was stored before
+    // This makes it the new user default unless they change it.
+    if (!languageWasStored) {
+        await chrome.storage.sync.set({ language: currentLanguage });
+    }
 
     // 初始化选项
     const settings = await chrome.storage.sync.get({ 
