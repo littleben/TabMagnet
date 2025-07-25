@@ -1,5 +1,5 @@
 ![TabMagnet](images/TabMagnet.jpg)
-# TabMagnet - New Tab Position Controller
+# TabMagnet - Open Tabs Next to Current
 
 Chrome extension for configuring new tab positions in browser windows with multilingual support.
 https://chromewebstore.google.com/detail/tabmagnet/hcjodleodhbpnjcdfgdahdfnadfmfikn

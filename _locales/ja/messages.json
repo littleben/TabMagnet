@@ -1,6 +1,6 @@
 {
   "extName": {
-    "message": "TabMagnet - 新規タブ位置コントローラー",
+    "message": "TabMagnet - 現在のタブの右側に新しいタブを開く",
     "description": "拡張機能名"
   },
   "extDesc": {
