@@ -70,5 +70,21 @@
   "shortcutInfoText_customizePart2": {
     "message": ".",
     "description": "Part of the text after the customize link (e.g., a period)."
+  },
+  "closeTabHeading": {
+    "message": "Tab Close Behavior",
+    "description": "Heading for tab close behavior options"
+  },
+  "closeTabLeft": {
+    "message": "⭐️ Switch to left tab when closing (Recommended)",
+    "description": "Option to switch to left tab when closing"
+  },
+  "closeTabRight": {
+    "message": "Switch to right tab when closing (Browser default)",
+    "description": "Option to switch to right tab when closing"
+  },
+  "closeTabSmart": {
+    "message": "Smart switching (Parent tab → Left tab → Right tab)",
+    "description": "Option for smart tab switching when closing"
   }
 }

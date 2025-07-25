@@ -70,5 +70,21 @@
   "shortcutInfoText_customizePart2": {
     "message": "できます。",
     "description": "カスタマイズリンク後のテキスト部分（例：句点）。"
+  },
+  "closeTabHeading": {
+    "message": "タブを閉じる時の動作",
+    "description": "タブを閉じる時の動作オプションの見出し"
+  },
+  "closeTabLeft": {
+    "message": "⭐️ タブを閉じた後、左側のタブに切り替える (推奨)",
+    "description": "タブを閉じた後、左側のタブに切り替えるオプション"
+  },
+  "closeTabRight": {
+    "message": "タブを閉じた後、右側のタブに切り替える (ブラウザのデフォルト)",
+    "description": "タブを閉じた後、右側のタブに切り替えるオプション"
+  },
+  "closeTabSmart": {
+    "message": "スマート切り替え (親タブ → 左側タブ → 右側タブ)",
+    "description": "タブを閉じる時のスマート切り替えオプション"
   }
 }

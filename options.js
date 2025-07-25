@@ -20,9 +20,9 @@ function applyTranslations(messages) {
   });
 }
 
-async function savePosition(position) {
+async function saveOptions(options) {
   try {
-    await chrome.storage.sync.set({ position });
+    await chrome.storage.sync.set(options);
     const currentMessages = await loadMessages(document.getElementById('lang').value);
     showStatus(currentMessages?.statusSaved?.message || 'Options saved');
     return true;
@@ -97,22 +97,35 @@ async function init() {
     }
 
     // 初始化选项
-    const settings = await chrome.storage.sync.get({ 
-      position: 'right'
+    const settings = await chrome.storage.sync.get({
+      position: 'right',
+      closeTabBehavior: 'left'
     });
-    
-    const radio = document.querySelector(`input[name="position"][value="${settings.position}"]`);
-    if (radio) {
-      radio.checked = true;
+
+    // 设置新标签位置选项
+    const positionRadio = document.querySelector(`input[name="position"][value="${settings.position}"]`);
+    if (positionRadio) {
+      positionRadio.checked = true;
     } else {
-      document.querySelector('input[value="right"]').checked = true;
-      await savePosition('right');
+      document.querySelector('input[name="position"][value="right"]').checked = true;
+    }
+
+    // 设置标签关闭行为选项
+    const closeTabRadio = document.querySelector(`input[name="closeTabBehavior"][value="${settings.closeTabBehavior}"]`);
+    if (closeTabRadio) {
+      closeTabRadio.checked = true;
+    } else {
+      document.querySelector('input[name="closeTabBehavior"][value="left"]').checked = true;
     }
 
     // 事件监听
     document.getElementById('options').addEventListener('change', async (e) => {
-      if (e.target.type === 'radio' && e.target.name === 'position') {
-        await savePosition(e.target.value);
+      if (e.target.type === 'radio') {
+        if (e.target.name === 'position') {
+          await saveOptions({ position: e.target.value });
+        } else if (e.target.name === 'closeTabBehavior') {
+          await saveOptions({ closeTabBehavior: e.target.value });
+        }
       }
     });
 

@@ -70,5 +70,21 @@
   "shortcutInfoText_customizePart2": {
     "message": "。",
     "description": "自定义链接后的文本部分 (例如句号)。"
+  },
+  "closeTabHeading": {
+    "message": "标签关闭行为",
+    "description": "标签关闭行为选项的标题"
+  },
+  "closeTabLeft": {
+    "message": "⭐️ 关闭标签后切换到左侧标签 (推荐)",
+    "description": "关闭标签后切换到左侧标签的选项"
+  },
+  "closeTabRight": {
+    "message": "关闭标签后切换到右侧标签 (浏览器默认)",
+    "description": "关闭标签后切换到右侧标签的选项"
+  },
+  "closeTabSmart": {
+    "message": "智能切换 (父标签 → 左侧标签 → 右侧标签)",
+    "description": "关闭标签时智能切换的选项"
   }
 }

@@ -17,21 +17,40 @@
     </div>
 
     <form id="options">
-      <div class="option">
-        <input type="radio" name="position" value="right" id="right" checked>
-        <label for="right" data-i18n="optionRight"></label>
+      <div class="section">
+        <h2 data-i18n="optionsHeading"></h2>
+        <div class="option">
+          <input type="radio" name="position" value="right" id="right" checked>
+          <label for="right" data-i18n="optionRight"></label>
+        </div>
+        <div class="option">
+          <input type="radio" name="position" value="left" id="left">
+          <label for="left" data-i18n="optionLeft"></label>
+        </div>
+        <div class="option">
+          <input type="radio" name="position" value="start" id="start">
+          <label for="start" data-i18n="optionStart"></label>
+        </div>
+        <div class="option">
+          <input type="radio" name="position" value="end" id="end">
+          <label for="end" data-i18n="optionEnd"></label>
+        </div>
       </div>
-      <div class="option">
-        <input type="radio" name="position" value="left" id="left">
-        <label for="left" data-i18n="optionLeft"></label>
-      </div>
-      <div class="option">
-        <input type="radio" name="position" value="start" id="start">
-        <label for="start" data-i18n="optionStart"></label>
-      </div>
-      <div class="option">
-        <input type="radio" name="position" value="end" id="end">
-        <label for="end" data-i18n="optionEnd"></label>
+
+      <div class="section">
+        <h2 data-i18n="closeTabHeading"></h2>
+        <div class="option">
+          <input type="radio" name="closeTabBehavior" value="left" id="closeLeft" checked>
+          <label for="closeLeft" data-i18n="closeTabLeft"></label>
+        </div>
+        <div class="option">
+          <input type="radio" name="closeTabBehavior" value="right" id="closeRight">
+          <label for="closeRight" data-i18n="closeTabRight"></label>
+        </div>
+        <div class="option">
+          <input type="radio" name="closeTabBehavior" value="smart" id="closeSmart">
+          <label for="closeSmart" data-i18n="closeTabSmart"></label>
+        </div>
       </div>
 
     </form>

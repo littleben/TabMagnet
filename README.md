@@ -5,11 +5,16 @@ Chrome extension for configuring new tab positions in browser windows with multi
 https://chromewebstore.google.com/detail/tabmagnet/hcjodleodhbpnjcdfgdahdfnadfmfikn
 
 ## Key Features
-- Customizable new tab positions:
+- **Customizable new tab positions**:
   - Right side of current tab (default)
-  - Left side of current tab 
+  - Left side of current tab
   - Far left in window
   - Far right in window (browser default)
+- **Smart tab close behavior**:
+  - Switch to left tab when closing (default)
+  - Switch to right tab when closing (browser default)
+  - Smart switching (parent → left → right)
+- **Tab Group Preservation**: Maintains Chrome tab groups when moving tabs
 - Multilingual interface (English/Chinese/Japanese)
 - Automatic preference saving
 - Responsive options page
@@ -49,9 +54,37 @@ How to switch languages:
 
 ## Technical Details
 - Chrome Manifest V3 compliant
-- Uses <mcsymbol name="chrome.tabs.onCreated" filename="background.js" path="TabMagnet/background.js" startline="1" type="function"></mcsymbol> for tab creation events
-- Syncs settings via <mcsymbol name="chrome.storage.sync" filename="options.js" path="TabMagnet/options.js" startline="3" type="function"></mcsymbol>
+- Uses `chrome.tabs.onCreated` for tab creation events
+- Uses `chrome.tabs.onRemoved` for tab close behavior
+- Conservative tab movement that respects existing groups
+- Syncs settings via `chrome.storage.sync`
 - Responsive layout (min-width: 300px)
+- Smart filtering to avoid interfering with browser operations
+
+## Recent Updates
+
+### Version 1.1.0 (Latest)
+- **✨ New**: Tab close behavior options
+  - Switch to left tab when closing (default, recommended)
+  - Switch to right tab when closing (browser default)
+  - Smart switching (parent tab → left tab → right tab)
+- **✨ New**: Improved options page with organized sections
+- **⚡ Improved**: Better user experience following best practices
+
+### Version 1.0.6
+- **🔧 Fixed**: Tab groups no longer break after browser restart
+- **🔧 Fixed**: Prevents all tabs from being grouped together
+- **🔧 Fixed**: "Far right" position now works consistently
+- **✨ New**: Smart tab filtering to avoid interfering with browser operations
+- **✨ New**: Conservative approach that preserves existing groups
+- **⚡ Improved**: Better timing and error handling
+
+### Version 1.0.5
+- Initial tab group preservation attempt (had issues)
+
+### Version 1.0.4
+- Multilingual support improvements
+- UI enhancements
 
 ## Contributing
 Welcome contributions via Issues:
